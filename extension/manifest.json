@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "DealMate",
+  "description": "A privacy-respecting tool to help users apply publicly available coupon codes.",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
