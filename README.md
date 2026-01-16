@@ -1,6 +1,6 @@
-# Open Coupons
+# DealMate
 
-Open Coupons is an open-source project that helps users save money by finding and applying publicly available coupon codes during online checkout.
+DealMate is an open-source project that helps users save money by finding and applying publicly available coupon codes during online checkout.
 
 The project is designed with the following principles:
 
