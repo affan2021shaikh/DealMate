@@ -18,11 +18,24 @@ document.getElementById("check").addEventListener("click", async () => {
         return;
       }
 
-      if (response && response.isCheckout) {
-        status.textContent = "Checkout-like page detected.";
-      } else {
-        status.textContent = "This does not look like a checkout page.";
+      if (!response) {
+        status.textContent = "No response from page.";
+        return;
       }
+
+      const { isCheckout, couponFields, applyButtons } = response;
+      let message = "";
+
+      if (isCheckout) {
+        message += "Checkout-like page detected.\n";
+      } else {
+        message += "This does not look like a checkout page.\n";
+      }
+
+      message += `Coupon fields found: ${couponFields}\n`;
+      message += `Apply buttons found: ${applyButtons}`;
+
+      status.textContent = message;
     }
   );
 });
